@@ -1,0 +1,6 @@
+# Program to find the largest number from a list 
+# Step 1: Define a list of numbers 
+numbers = [5, 12, 7, 29, 3] 
+largest = max(numbers) 
+ 
+print("Largest number:", largest) 
