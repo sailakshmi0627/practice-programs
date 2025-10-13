@@ -1,0 +1,10 @@
+# Program to split a string into an array of characters 
+ 
+# Input from user 
+text = input("Enter a string: ") 
+ 
+# Convert string into list of characters 
+char_list = list(text) 
+ 
+# Display result 
+print("Array of characters:", char_list)
