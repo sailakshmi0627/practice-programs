@@ -1,0 +1,12 @@
+import pandas as pd
+# (i) Create and display a one-dimensional array-like object (Series)
+print("=== (i) Creating and displaying a Pandas Series ===")
+data = [10, 20, 30, 40, 50]
+series = pd.Series(data)
+print("Pandas Series:")
+print(series) 
+# (ii) Convert a Pandas Series to a Python list and display its type
+print("\n=== (ii) Convert Series to Python list and display type ===")
+python_list = series.tolist()
+print("Python List:", python_list)
+print("Type of converted list:", type(python_list))
