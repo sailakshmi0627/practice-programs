@@ -1,0 +1,32 @@
+#include <stdio.h>
+
+void printPattern(int n) {
+    // Calculate the size of the grid
+    int size = 2 * n - 1;
+    
+    // Loop through each row
+    for (int i = 0; i < size; i++) {
+        // Loop through each column
+        for (int j = 0; j < size; j++) {
+            // Calculate the value based on the minimum distance from the edges
+            int value = n - (i < j ? (i < size - 1 - j ? i : size - 1 - j) : (j < size - 1 - i ? j : size - 1 - i));
+            
+            // Print the value followed by a space
+            printf("%d ", value);
+        }
+        // Move to the next line after printing a row
+        printf("\n");
+    }
+}
+
+int main() {
+    int n;
+    
+    // Read the input value
+    scanf("%d", &n);
+    
+    // Call the function to print the pattern
+    printPattern(n);
+    
+    return 0;
+}
