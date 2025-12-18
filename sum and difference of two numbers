@@ -1,0 +1,17 @@
+#include <stdio.h>
+
+
+int main()
+{
+	int a,b,sum1,diff1;
+    float c,d,sum2,diff2;
+    scanf("%d%d",&a,&b);
+    sum1=a+b;
+    diff1=a-b;
+    scanf("%f%f",&c,&d);
+    sum2=c+d;
+    diff2=c-d;
+    printf("%d %d\n%.1f %.1f",sum1,sum2,diff1,diff2);
+    return 0;
+    
+}
