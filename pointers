@@ -1,0 +1,29 @@
+#include <stdio.h>
+#include <stdio.h>
+#include <stdlib.h> // For the abs() function
+
+// Function to update the values of a and b
+void update(int *a, int *b) {
+    int temp_a = *a + *b; // Sum of a and b
+    int temp_b = abs(*a - *b); // Absolute difference between a and b
+    
+    *a = temp_a; // Updating value of a
+    *b = temp_b; // Updating value of b
+}
+
+int main() {
+    int a, b;
+    
+    // Input the values of a and b
+    scanf("%d", &a);
+    scanf("%d", &b);
+    
+    // Call the update function to modify the values of a and b
+    update(&a, &b);
+    
+    // Output the updated values of a and b
+    printf("%d\n", a);
+    printf("%d\n", b);
+    
+    return 0;
+}
