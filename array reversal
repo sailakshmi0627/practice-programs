@@ -1,0 +1,39 @@
+#include <stdio.h>
+
+int main() {
+    int n;
+    
+    // Read the size of the array
+    scanf("%d", &n);
+    
+    int arr[n];  // Declare the array of size n
+    
+    // Read the array elements
+    for (int i = 0; i < n; i++) {
+        scanf("%d", &arr[i]);
+    }
+    
+    // Reverse the array using two pointers
+    int start = 0, end = n - 1;
+    while (start < end) {
+        // Swap arr[start] with arr[end]
+        int temp = arr[start];
+        arr[start] = arr[end];
+        arr[end] = temp;
+        
+        // Move towards the center
+        start++;
+        end--;
+    }
+    
+    // Print the reversed array
+    for (int i = 0; i < n; i++) {
+        printf("%d", arr[i]);
+        if (i < n - 1) {
+            printf(" ");  // Print a space between elements, except after the last element
+        }
+    }
+    printf("\n");
+    
+    return 0;
+}
