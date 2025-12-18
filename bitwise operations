@@ -1,0 +1,43 @@
+#include <stdio.h>
+
+void calculate_the_maximum(int n, int k) {
+    int max_and = 0, max_or = 0, max_xor = 0;
+
+    // Loop over all pairs (i, j) where 1 <= i < j <= n
+    for (int i = 1; i < n; i++) {
+        for (int j = i + 1; j <= n; j++) {
+            // Compute the AND, OR, XOR of i and j
+            int and_val = i & j;
+            int or_val = i | j;
+            int xor_val = i ^ j;
+            
+            // Update max_and, max_or, max_xor if conditions are met
+            if (and_val < k && and_val > max_and) {
+                max_and = and_val;
+            }
+            if (or_val < k && or_val > max_or) {
+                max_or = or_val;
+            }
+            if (xor_val < k && xor_val > max_xor) {
+                max_xor = xor_val;
+            }
+        }
+    }
+
+    // Print the results
+    printf("%d\n", max_and);
+    printf("%d\n", max_or);
+    printf("%d\n", max_xor);
+}
+
+int main() {
+    int n, k;
+    
+    // Read input values
+    scanf("%d %d", &n, &k);
+    
+    // Call the function to calculate the maximum values
+    calculate_the_maximum(n, k);
+    
+    return 0;
+}
